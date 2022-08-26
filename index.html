@@ -1,13 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .user-post{
+            background-color: slategrey;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 50px;
+        }
+    </style>
 </head>
+
 <body>
-    <button onclick=loadData()>Load Data</button>
+    <header>
+        <h2>Explore API (Application Programming Interface</h2>
+    </header>
+
+    <main>
+        <section>
+            <button onclick=loadData()>Load Data</button>
+            <button onclick=loadUsers()>Load Users</button>
+    
+            <div class="users">
+                <ol id="user-list">
+    
+                </ol>
+    
+                <table id="users-list-table">
+                    <tr>
+                        <th>User Name</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <div id="user-posts">
+                <!-- ----------Posts will be here---------- -->
+            </div>
+        </section>
+    </main>
+    <!-- ---------Script---------- -->
     <script src="js/fetch.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/post.js"></script>
 </body>
+
 </html>
